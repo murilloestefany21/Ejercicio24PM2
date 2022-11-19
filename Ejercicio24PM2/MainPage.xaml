@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:video="clr-namespace:Xam.Forms.VideoPlayer;assembly=Xam.Forms.VideoPlayer"
+             x:Class="Ejercicio24PM2.MainPage">
+                
+    <StackLayout>
+        <Frame BackgroundColor="DarkRed" Padding="24" CornerRadius="0">
+            <Label Text="Aplicacion de Toma de Video" HorizontalTextAlignment="Center" TextColor="White" FontSize="24"/>
+        </Frame>
+        <video:VideoPlayer 
+            x:Name="videoPlayer" 
+            BackgroundColor="White"
+            HorizontalOptions="Center"
+            HeightRequest="350" 
+            />
+
+        
+        <Label Text="Descripción:" HorizontalTextAlignment="Start" TextColor="White" FontSize="18" />
+        <Entry Placeholder="" Margin="30,10,30,0" x:Name="txtdescripcion"/>
+        <Grid Margin="20,0,20,0">
+            <Button Text="Grabar Video" Grid.Column="0" x:Name="btnGrabar" Clicked="btnGrabar_Clicked" BackgroundColor="CadetBlue"/>
+            <Button Text="Salvar Video" Grid.Column="1" x:Name="btnSalvar" Clicked="btnSalvar_Clicked" BackgroundColor="Green"/>
+            <Button Text="Lista Videos" Grid.Row="1" Grid.ColumnSpan="2" x:Name="btnlistarvideo" Clicked="btnlistarvideo_Clicked" BackgroundColor="DarkRed"/>
+        </Grid>
+    </StackLayout>
+
+</ContentPage>
